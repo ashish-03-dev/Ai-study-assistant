@@ -43,19 +43,22 @@ Users can upload PDF documents and ask questions. The system retrieves relevant 
 
 ## 📸 Demo
 
-### 📄 Upload PDF
-[![Upload](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png)
+### 📄 Upload PDF + Processing + Chat
 
-### 🔄 Processing Logs
-[![Processing](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png)
+<div align="center">
+  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png" width="30%" />
+  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png" width="30%" />
+  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png" width="30%" />
+</div>
 
-### 💬 Chat Interface
-[![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png)
+<br>
 
-[![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png)
+### 💬 Chat Interface (More Views)
 
-### 🧠 Backend Logs Query
-[![Backend](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png)
+<div align="center">
+  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png" width="30%" />
+  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png" width="30%" />
+</div>
 
 ## 🔄 System Flow
 
@@ -110,8 +113,8 @@ ai-assistant/
 ### 1️⃣ Clone Repository
 
 ```
-git clone https://github.com/YOUR_USERNAME/ai-assistant.git
-cd ai-assistant
+git clone https://github.com/ashish-03-dev/Ai-study-assistant.git
+cd ai-study-assistant
 ```
 
 ---
@@ -153,13 +156,17 @@ Run locally:
 
 ```bash
 cd ~/endee
+
+# Start Endee server
 ./build/ndd-avx2 --data-dir ./data
 
-curl http://localhost:8080/api/v1/index/list
-
+# Create index
 curl -X POST http://localhost:8080/api/v1/index/create \
 -H "Content-Type: application/json" \
 -d '{"index_name":"docs","dim":768,"space_type":"cosine"}'
+
+# Verify / test index creation
+curl http://localhost:8080/api/v1/index/list
 ```
 
 ---
@@ -177,7 +184,7 @@ ollama pull nomic-embed-text
 
 ## 🔍 Example Workflow
 
-1. Upload a PDF
+1. Upload a PDF (fiction PDF used for testing)
 2. System processes document in background
 3. Ask a question
 4. Relevant chunks retrieved using Endee
@@ -185,40 +192,10 @@ ollama pull nomic-embed-text
 
 ---
 
-## 📊 Evaluation Criteria Covered
-
-✅ Uses Endee Vector Database
-✅ Implements Semantic Search
-✅ Implements RAG Pipeline
-✅ Real-world AI application
-✅ Clean modular backend (services/controllers)
-
----
-
-## 🌟 Why This Project Stands Out
-
-* Implements **production-style RAG pipeline**
-* Uses **real vector DB (Endee)** instead of mock storage
-* Handles **async document processing**
-* Clean separation of concerns (services architecture)
-
----
-
 ## 🔮 Future Improvements
 
 * Add authentication (user-based documents)
-* Streaming responses from LLM
-* UI improvements (chat history, highlighting chunks)
-* Deploy using Docker
-
----
-
-## 📬 Submission Checklist
-
-* [x] Star Endee repo
-* [x] Fork Endee repo
-* [x] Built project using Endee
-* [x] Uploaded to GitHub
+* UI improvements (chat history)
 
 ---
 
