@@ -41,6 +41,22 @@ Users can upload PDF documents and ask questions. The system retrieves relevant 
 
 ---
 
+## 📸 Demo
+
+### 📄 Upload PDF
+![Upload](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png)
+
+### 🔄 Processing Logs
+![Processing](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png)
+
+### 💬 Chat Interface
+![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png)
+![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png)
+
+### 🧠 Backend Logs Query
+![Backend](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png)
+
+
 ## 🔄 System Flow
 
 ```
