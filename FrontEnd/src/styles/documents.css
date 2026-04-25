@@ -1,0 +1,27 @@
+.doc-container {
+  max-width: 600px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.doc-card {
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.doc-card:hover {
+  transform: translateY(-3px);
+}
+
+.error {
+  color: red;
+}
