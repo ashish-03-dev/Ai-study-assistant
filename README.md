@@ -44,18 +44,18 @@ Users can upload PDF documents and ask questions. The system retrieves relevant 
 ## 📸 Demo
 
 ### 📄 Upload PDF
-![Upload](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png)
+[![Upload](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png)
 
 ### 🔄 Processing Logs
-![Processing](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png)
+[![Processing](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png)
 
 ### 💬 Chat Interface
-![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png)
-![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png)
+[![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png)
+
+[![Chat](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png)
 
 ### 🧠 Backend Logs Query
-![Backend](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png)
-
+[![Backend](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png)](https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png)
 
 ## 🔄 System Flow
 
@@ -149,13 +149,17 @@ npm start
 
 ### 4️⃣ Run Endee Vector DB
 
-Follow:
-👉 https://github.com/endee-io/endee
-
 Run locally:
 
-```
-docker-compose up
+```bash
+cd ~/endee
+./build/ndd-avx2 --data-dir ./data
+
+curl http://localhost:8080/api/v1/index/list
+
+curl -X POST http://localhost:8080/api/v1/index/create \
+-H "Content-Type: application/json" \
+-d '{"index_name":"docs","dim":768,"space_type":"cosine"}'
 ```
 
 ---
