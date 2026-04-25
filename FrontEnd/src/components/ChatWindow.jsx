@@ -2,7 +2,7 @@ import "../styles/chatwindow.css";
 import MessageList from "./MessageList";
 import MessageInput from "./MessageInput";
 
-function ChatWindow({ chats, activeChatId, setActiveChatId, setChats, showGreeting, setShowGreeting }) {
+function ChatWindow({ chats, activeChatId, setActiveChatId, setActiveMenu, setChats, showGreeting, setShowGreeting }) {
   const activeChat = chats.find(c => c.id === activeChatId);
   const messages = activeChat ? activeChat.messages : [];
 
@@ -20,7 +20,7 @@ function ChatWindow({ chats, activeChatId, setActiveChatId, setChats, showGreeti
       )
     );
   };
-  
+
   const handleSend = async (text) => {
     let chatId = activeChatId;
 
@@ -35,7 +35,7 @@ function ChatWindow({ chats, activeChatId, setActiveChatId, setChats, showGreeti
       setChats(prev => [newChat, ...prev]);
       setActiveChatId(newChat.id);
       setShowGreeting(false);
-
+      setActiveMenu(null);
       chatId = newChat.id;
     }
 

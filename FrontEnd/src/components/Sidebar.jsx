@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import "../styles/sidebar.css";
 
-function Sidebar({ toggleRightPanel, setChats, setActiveChatId, chats, onSelectChat, setShowGreeting }) {
-    const [active, setActive] = useState("home");
+function Sidebar({ toggleRightPanel, setChats, activeChatId, setActiveChatId, activeMenu, setActiveMenu, chats, onSelectChat, setShowGreeting }) {
     const [openMenuId, setOpenMenuId] = useState(null);
 
     const menuItems = [
@@ -11,7 +10,7 @@ function Sidebar({ toggleRightPanel, setChats, setActiveChatId, chats, onSelectC
     ];
 
     const handleClick = (item) => {
-        setActive(item.id);
+        setActiveMenu(item.id);
 
         if (item.id === "home") {
             setChats(prev => prev.filter(chat => chat.messages.length > 0));
@@ -31,13 +30,11 @@ function Sidebar({ toggleRightPanel, setChats, setActiveChatId, chats, onSelectC
     const handleDelete = (id) => {
         setChats(prev => prev.filter(chat => chat.id !== id));
 
-        setActiveChatId(prev => {
-            if (prev === id) {
-                setShowGreeting(true);
-                return null;
-            }
-            return prev;
-        });
+        if (activeChatId === id) {
+            setActiveChatId(null);
+            setShowGreeting(true);
+            setActiveMenu("home");
+        }
 
         setOpenMenuId(null);
     };
@@ -56,7 +53,7 @@ function Sidebar({ toggleRightPanel, setChats, setActiveChatId, chats, onSelectC
                 <button
                     className="new-chat"
                     onClick={() => {
-                        setActive("home");
+                        setActiveMenu("home");
                         setChats(prev => prev.filter(chat => chat.messages.length > 0));
                         setActiveChatId(null);
                         setShowGreeting(true);
@@ -71,7 +68,7 @@ function Sidebar({ toggleRightPanel, setChats, setActiveChatId, chats, onSelectC
                 {menuItems.map((item) => (
                     <p
                         key={item.id}
-                        className={active === item.id ? "menu-item active" : "menu-item"}
+                        className={activeMenu === item.id ? "menu-item active" : "menu-item"}
                         onClick={() => handleClick(item)}
                     >
                         {item.label}
@@ -89,10 +86,15 @@ function Sidebar({ toggleRightPanel, setChats, setActiveChatId, chats, onSelectC
                     {chats.map((chat) => (
                         <div
                             key={chat.id}
-                            className="recent-item"
+                            className={
+                                chat.id === activeChatId
+                                    ? "recent-item active-chat"
+                                    : "recent-item"
+                            }
                             onClick={() => {
                                 onSelectChat(chat.id);
                                 setShowGreeting(false);
+                                setActiveMenu(null); // ❗ remove menu highlight
                             }}
                         >
                             <span className="chat-title">{chat.title}</span>

@@ -8,17 +8,6 @@
     box-sizing: border-box;
 }
 
-.new-chat {
-    width: 100%;
-    padding: 10px;
-    margin: 15px 0;
-    border: none;
-    background: #4a90e2;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
 /* Full screen overlay */
 .upload-overlay {
     position: fixed;

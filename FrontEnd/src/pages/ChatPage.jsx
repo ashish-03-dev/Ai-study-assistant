@@ -12,6 +12,7 @@ function ChatPage() {
     const [activeChatId, setActiveChatId] = useState(null);
     const [showGreeting, setShowGreeting] = useState(true);
     const [overlayType, setOverlayType] = useState(null);
+    const [activeMenu, setActiveMenu] = useState("home");
 
     const [chats, setChats] = useState(() => {
         const saved = localStorage.getItem("chats");
@@ -31,8 +32,11 @@ function ChatPage() {
                     setShowGreeting(false); // hide greeting when opening chat
                 }}
                 setChats={setChats}
+                activeChatId={activeChatId}
                 setActiveChatId={setActiveChatId}
                 setShowGreeting={setShowGreeting}
+                activeMenu={activeMenu}
+                setActiveMenu={setActiveMenu}
                 toggleRightPanel={() => setShowRightPanel(prev => !prev)}
             />
 
@@ -42,6 +46,7 @@ function ChatPage() {
                 setChats={setChats}
                 setActiveChatId={setActiveChatId}
                 showGreeting={showGreeting}        // 👈 pass it
+                setActiveMenu={setActiveMenu}
                 setShowGreeting={setShowGreeting}
             />
 

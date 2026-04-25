@@ -18,18 +18,22 @@
 }
 
 .new-chat {
-  background: linear-gradient(135deg, #6c5ce7, #8e7cf3);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu{
+  margin-top: 20px;
 }
 
 .menu-item {
   padding: 4px 6px;
-  /* border-radius: 8px; */
   cursor: pointer;
   color: #555;
   transition: all 0.2s ease;
@@ -40,11 +44,7 @@
 .menu-item.active {
   color: #6c5ce7;
   font-weight: 500;
-  /* background: #f5f3ff; */
   border-left: 3px solid #6c5ce7;
-}
-.menu{
-  margin-top: 20px;
 }
 
 .menu p {
@@ -54,15 +54,50 @@
   padding-left: 20px;
 }
 
-/* Sidebar menu */
+.recent {
+  padding: 20px;
+  flex: 1;
+}
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent h4 {
+  font-size: 14px;
+  color: #888;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .recent-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 8px 12px;
   cursor: pointer;
   position: relative;
+  border-radius: 8px;
+  transition: 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.recent-item:hover {
+  background: #f0f0f0;
+}
+
+.recent-item.active-chat {
+  background: #dfe6e9;
+}
+
+.chat-title{
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .chat-menu {
@@ -84,7 +119,7 @@
   background: #1e1e1e;
   border: 1px solid #333;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 3px 0;
   z-index: 10;
 }
 
@@ -102,59 +137,8 @@
   color: #ff4d4f;
 }
 
-/* Recent Section */
-.recent {
-  padding: 20px;
-  flex: 1;
-}
-
-.recent-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.recent h4 {
-  font-size: 14px;
-  color: #888;
-}
-
 .view-all {
   font-size: 12px;
   color: #6c5ce7;
   cursor: pointer;
-}
-
-/* Chat List */
-.recent-list {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* Each Chat Item */
-.recent-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.recent-item:hover {
-  background: #f5f3ff;
-}
-
-/* Title + Time */
-.chat-title {
-  font-size: 13px;
-  color: #444;
-}
-
-.chat-time {
-  font-size: 12px;
-  color: #999;
 }
