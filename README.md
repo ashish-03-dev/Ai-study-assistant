@@ -46,9 +46,9 @@ Users can upload PDF documents and ask questions. The system retrieves relevant 
 ### 📄 Upload PDF + Processing + Chat
 
 <div align="center">
-  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120201_zshu4m.png" width="30%" />
-  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120234_buaqqy.png" width="30%" />
-  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120422_wlapku.png" width="30%" />
+  <img src="https://res.cloudinary.com/dd8sex7ov/image/upload/v1777921317/Screenshot_2026-04-25_120201_xrcnal.png" width="30%" />
+  <img src="https://res.cloudinary.com/dd8sex7ov/image/upload/v1777921320/Screenshot_2026-04-25_120234_g6iptu.png" width="30%" />
+  <img src="https://res.cloudinary.com/dd8sex7ov/image/upload/v1777921321/Screenshot_2026-04-25_120405_mdn0is.png" width="30%" />
 </div>
 
 <br>
@@ -56,8 +56,8 @@ Users can upload PDF documents and ask questions. The system retrieves relevant 
 ### 💬 Chat Interface (More Views)
 
 <div align="center">
-  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777098550/Screenshot_2026-04-25_115401_z8ud03.png" width="30%" />
-  <img src="https://res.cloudinary.com/dqu3mzqfj/image/upload/v1777099111/Screenshot_2026-04-25_120405_wtujub.png" width="30%" />
+  <img src="https://res.cloudinary.com/dd8sex7ov/image/upload/v1777921316/Screenshot_2026-04-25_115401_vrh2am.png" width="30%" />
+  <img src="https://res.cloudinary.com/dd8sex7ov/image/upload/v1777921322/Screenshot_2026-04-25_120422_qagdu7.png" width="30%" />
 </div>
 
 ## 🔄 System Flow

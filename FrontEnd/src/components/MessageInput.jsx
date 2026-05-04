@@ -21,6 +21,8 @@ function MessageInput({ onSend, setShowGreeting, disabled }) {
             setInput(e.target.value);
             if (e.target.value.length > 0) {
               setShowGreeting(false);
+            } else {
+              setShowGreeting(true);
             }
           }}
           disabled={disabled}

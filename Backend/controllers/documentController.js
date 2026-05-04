@@ -59,13 +59,12 @@ async function processDocument(filePath, docMeta) {
 
     // ✂️ Split into chunks
     const chunks = chunkService.split(text);
-    // console.log("Chunks type:", typeof chunks);
-    // console.log("Chunks value:", chunks);
 
     docMeta.chunks = chunks.length;
 
     // 🧠 Create embeddings
     const embeddings = await embeddingService.createEmbeddings(chunks);
+    
     if (!embeddings || embeddings.length === 0) {
       throw new Error("Embeddings not generated");
     }
